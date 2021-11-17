@@ -24,6 +24,6 @@ public interface RepoDao {
     @Query("SELECT count(*) FROM repo WHERE owner = :owner")
     int getNumberReposByUser(String owner);
 
-    @Query("SELECT * FROM repo WHERE owner = :owner")
+    @Query("DELETE FROM repo WHERE owner = :owner")
     int deleteReposByUser(String owner);
 }
